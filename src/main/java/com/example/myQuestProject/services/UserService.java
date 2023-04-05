@@ -28,8 +28,8 @@ public class UserService {
 		return userRepository.save(data);
 	}
 	
-	public Optional<User> getUserById(@PathVariable Long id){
-		return userRepository.findById(id);
+	public User getOneById(@PathVariable Long id){
+		return userRepository.findOneById(id);
 	}
 	
 	

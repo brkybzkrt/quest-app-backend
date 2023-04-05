@@ -13,4 +13,6 @@ import com.example.myQuestProject.entities.User;
  */
 public interface UserRepository extends JpaRepository<User, Long> {
 
+	User findOneById(Long id);
+
 }
