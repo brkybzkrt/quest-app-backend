@@ -30,7 +30,7 @@ public class PostController {
 	}
 	
 	@GetMapping("/{id}")
-	public Optional<Post> getOneById(@PathVariable Long id){
+	public Post getOneById(@PathVariable Long id){
 		return postService.getOneById(id);
 	}
 	

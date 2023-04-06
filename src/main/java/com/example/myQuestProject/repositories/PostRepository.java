@@ -12,5 +12,7 @@ public interface PostRepository extends JpaRepository<Post, Long> {
 	List<Post> findByUserId(Long userId);
 
 	Post save(PostCreateDto data);
+	
+	Post findOneById(Long id);
 
 }

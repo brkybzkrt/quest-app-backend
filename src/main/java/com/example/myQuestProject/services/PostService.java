@@ -26,8 +26,8 @@ public class PostService {
 	}
 
 	
-	public Optional<Post> getOneById(@PathVariable Long id){
-		return postRepository.findById(id);
+	public Post getOneById(@PathVariable Long id){
+		return postRepository.findOneById(id);
 	}
 	
 	
