@@ -45,10 +45,10 @@ public class PostService {
 		
 		 User isExist = userService.getOneById(data.getUserId());
 		 
+		 Post newPost= new Post();
 		 if(isExist != null)
 		 {
-			 Post newPost= new Post();
-			 newPost.setId(data.getId());
+			 
 			 newPost.setText(data.getText());
 			 newPost.setTitle(data.getTitle());
 			 newPost.setUser(isExist);
@@ -57,7 +57,7 @@ public class PostService {
 		 }
 		 
 		
-		return postRepository.save(data);
+		return postRepository.save(newPost);
 	}
 
 
